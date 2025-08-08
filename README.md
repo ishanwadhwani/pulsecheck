@@ -1,37 +1,42 @@
-PulseCheck - Frontend
-This is the frontend for the PulseCheck application, built with Next.js and styled with Tailwind CSS. It provides a user-friendly dashboard to interact with the backend API, manage monitors, and view status history.
+# PulseCheck - Uptime Monitoring SaaS
 
-✨ Features
-Modern UI: Clean and responsive interface built with Next.js and Tailwind CSS.
+PulseCheck is a simple and reliable uptime monitoring service built with the MERN stack (Next.js instead of React). It allows users to monitor their websites and APIs, receiving instant email alerts when a service goes down.
 
-User Authentication: Login and registration pages that connect to the backend's auth system.
+## ✨ Features
 
-Dynamic Dashboard: Displays a user's monitors and updates their status in real-time using polling.
+-   Secure user registration and JWT-based authentication.
+-   CRUD functionality for managing monitors (Create, Read, Update, Delete).
+-   A 24/7 background engine that intelligently checks services based on user-defined intervals.
+-   Real-time dashboard updates using polling.
+-   Email notifications for downtime alerts via Nodemailer.
 
-Full CRUD Interface: Users can create, edit, and delete their monitors through intuitive modals.
+## 🛠️ Tech Stack
 
-Dynamic Routing: A details page for each monitor to view its specific log history.
+-   **Frontend:** Next.js, React, Tailwind CSS
+-   **Backend:** Node.js, Express.js
+-   **Database:** PostgreSQL
+-   **Authentication:** JSON Web Tokens (JWT), bcryptjs
+-   **Task Scheduling:** node-cron
+-   **Email:** Nodemailer
 
-Protected Routes: The dashboard and details pages are protected and require a valid login session.
+## 🚀 Getting Started
 
-🛠️ Tech Stack
-Framework: Next.js
+### Prerequisites
 
-UI Library: React
+-   Node.js
+-   PostgreSQL
 
-Styling: Tailwind CSS
+### Backend Setup
 
-🚀 Getting Started
-1. Prerequisites
-You must have Node.js installed.
+1.  Navigate to the `pulsecheck-backend` directory.
+2.  Run `npm install`.
+3.  Create a `.env` file and add your PostgreSQL and JWT secret credentials.
+4.  Set up the database using the SQL schema provided.
+5.  Run `npm run dev` to start the backend server.
 
-The PulseCheck Backend server must be running for the frontend to function correctly.
+### Frontend Setup
 
-2. Installation & Running
-Navigate to the directory: cd pulsecheck-frontend
-
-Install dependencies: npm install
-
-Start the development server: npm run dev
-
-The application will be available at http://localhost:3000.
+1.  Navigate to the `pulsecheck-frontend` directory.
+2.  Run `npm install`.
+3.  Run `npm run dev` to start the frontend development server.
+4.  Open `http://localhost:3000` in your browser.
